@@ -1,0 +1,16 @@
+{
+	"name": "monstercat-release-clone",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "sass --watch --update --no-source-map --style=expanded scss/index.scss:index.css",
+		"build": "sass --no-source-map --style=compressed scss/index.scss:index.css"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"sass": "^1.67.0"
+	}
+}
