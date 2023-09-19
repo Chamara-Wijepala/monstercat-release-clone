@@ -1,0 +1,15 @@
+.container {
+	padding-inline: 1rem;
+	margin-inline: auto;
+	max-width: 31.25rem;
+
+	@include md {
+		max-width: 46rem;
+	}
+	@include lg {
+		max-width: 60rem;
+	}
+	@include xl {
+		max-width: 73rem;
+	}
+}
