@@ -1,5 +1,62 @@
 body {
 	background-image: url('../../assets/images/background-tile.webp');
+
+	&::after {
+		background-image: url('../../assets/images/background-tile.webp');
+		content: '';
+		opacity: 0.5;
+		width: 300%;
+		height: 300%;
+		position: fixed;
+		top: -100%;
+		left: -50%;
+		z-index: -1;
+		animation: film-grain 8s steps(10) infinite;
+	}
+
+	@keyframes film-grain {
+		0%,
+		100% {
+			-webkit-transform: translate(0, 0);
+			transform: translate(0, 0);
+		}
+		10% {
+			-webkit-transform: translate(-5%, -10%);
+			transform: translate(-5%, -10%);
+		}
+		20% {
+			-webkit-transform: translate(-15%, 5%);
+			transform: translate(-15%, 5%);
+		}
+		30% {
+			-webkit-transform: translate(7%, -25%);
+			transform: translate(7%, -25%);
+		}
+		40% {
+			-webkit-transform: translate(-5%, 25%);
+			transform: translate(-5%, 25%);
+		}
+		50% {
+			-webkit-transform: translate(-15%, 10%);
+			transform: translate(-15%, 10%);
+		}
+		60% {
+			-webkit-transform: translate(15%, 0%);
+			transform: translate(15%, 0%);
+		}
+		70% {
+			-webkit-transform: translate(0%, 15%);
+			transform: translate(0%, 15%);
+		}
+		80% {
+			-webkit-transform: translate(3%, 25%);
+			transform: translate(3%, 25%);
+		}
+		90% {
+			-webkit-transform: translate(-10%, 10%);
+			transform: translate(-10%, 10%);
+		}
+	}
 }
 
 .background-poster {
@@ -8,8 +65,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	opacity: 0.4;
-	filter: blur(5px);
+	filter: blur(5px) brightness(38%);
 	// image fade effect
 	-webkit-mask-image: linear-gradient(180deg, black 50%, transparent 100%);
 	mask-image: linear-gradient(180deg, black 50%, transparent 100%);
