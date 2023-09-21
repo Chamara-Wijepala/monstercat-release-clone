@@ -10,7 +10,7 @@ body {
 		position: fixed;
 		top: -100%;
 		left: -50%;
-		z-index: -1;
+		z-index: -2;
 		animation: film-grain 8s steps(10) infinite;
 	}
 
@@ -60,7 +60,10 @@ body {
 }
 
 .background-poster {
+	position: absolute;
+	width: 100%;
 	min-height: 100vh;
+	z-index: -1;
 	background-image: url('../../assets/images/cover-1024.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
