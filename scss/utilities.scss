@@ -1,0 +1,45 @@
+$colors: (
+	'primary-900': $clr-primary-900,
+	'primary-100': $clr-primary-100,
+	'primary-200': $clr-primary-200,
+	'secondary-400': $clr-secondary-400,
+	'accent-400': $clr-accent-400,
+);
+
+$font-sizes: (
+	'300': $fs-300,
+	'400': $fs-400,
+	'500': $fs-500,
+	'600': $fs-600,
+	'700': $fs-700,
+	'800': $fs-800,
+	'900': $fs-900,
+);
+
+$font-families: (
+	'montserrat': $ff-montserrat,
+	'monument-extended': $ff-monument-extended,
+	'liberation-sans': $ff-liberation-sans,
+	'nimbus-sans': $ff-nimbus-sans,
+);
+
+@each $key, $val in $colors {
+	.text-#{$key} {
+		color: #{$val};
+	}
+	.bg-#{$key} {
+		background-color: #{$val};
+	}
+}
+
+@each $key, $val in $font-sizes {
+	.fs-#{$key} {
+		font-size: #{$val};
+	}
+}
+
+@each $key, $val in $font-families {
+	.ff-#{$key} {
+		font-family: #{$val};
+	}
+}
