@@ -1,0 +1,116 @@
+.side-nav {
+	width: 420px;
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	color: $clr-primary-100;
+	background-color: $clr-primary-900;
+	font-family: 'Monument Extended';
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	transform: translateX(100%);
+	transition: transform 0.3s;
+
+	&.open {
+		transform: translateX(0%);
+	}
+
+	button {
+		width: 1.5rem;
+	}
+
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem;
+
+		img {
+			max-width: 180px;
+		}
+	}
+
+	&-middle {
+		overflow: auto;
+		padding: 2rem;
+
+		@include xl {
+			font-size: $fs-500;
+		}
+
+		li {
+			padding-top: 1rem;
+		}
+
+		.has-submenu {
+			// display chevron right
+			& > a {
+				display: inline-flex;
+				align-items: center;
+				gap: 1rem;
+
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					background-image: url('../../assets/icons/chevron-right-solid.svg');
+					background-repeat: no-repeat;
+				}
+			}
+
+			& > ul {
+				display: none;
+			}
+
+			&.active {
+				// display chevron up
+				& > a {
+					&::after {
+						background-image: url('../../assets/icons/chevron-up-solid.svg');
+					}
+				}
+
+				& > ul {
+					display: block;
+				}
+			}
+		}
+
+		.submenu {
+			color: $clr-secondary-400;
+			margin-left: 1rem;
+
+			li {
+				transition: 0.3s;
+
+				&:hover {
+					color: $clr-primary-100;
+				}
+			}
+
+			.standard-case {
+				text-transform: none;
+			}
+		}
+	}
+
+	&-bottom {
+		font-size: $fs-300;
+		padding: 2rem;
+		margin-top: auto;
+
+		ul {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		span {
+			margin-left: 0.5rem;
+		}
+	}
+}
