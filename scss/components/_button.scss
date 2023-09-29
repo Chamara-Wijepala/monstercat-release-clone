@@ -6,6 +6,7 @@
 	transition: 0.3s;
 
 	&:hover {
+		border: 1px solid $clr-primary-100;
 		color: $clr-primary-900;
 		background-color: $clr-primary-100;
 	}
@@ -30,9 +31,11 @@
 }
 
 .btn-accent {
+	border: 1px solid $clr-accent-400;
 	background-color: $clr-accent-400;
 }
 
 .btn-borderless {
+	border: 1px solid transparent;
 	color: $clr-primary-100;
 }
