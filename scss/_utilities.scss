@@ -43,3 +43,11 @@ $font-families: (
 		font-family: #{$val};
 	}
 }
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.media-icon {
+	width: 1.125rem;
+}
