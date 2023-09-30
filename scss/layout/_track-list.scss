@@ -1,0 +1,14 @@
+.track-list {
+	margin-top: 4rem;
+
+	h2 {
+		@include section-header;
+		letter-spacing: 0.125rem;
+	}
+
+	ol {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+}
