@@ -16,6 +16,12 @@ $font-sizes: (
 	'900': $fs-900,
 );
 
+$font-weights: (
+	'400': 400,
+	'500': 500,
+	'600': 600,
+);
+
 $font-families: (
 	'montserrat': $ff-montserrat,
 	'monument-extended': $ff-monument-extended,
@@ -35,6 +41,12 @@ $font-families: (
 @each $key, $val in $font-sizes {
 	.fs-#{$key} {
 		font-size: #{$val};
+	}
+}
+
+@each $key, $val in $font-weights {
+	.fw-#{$key} {
+		font-weight: #{$val};
 	}
 }
 
