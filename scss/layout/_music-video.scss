@@ -1,0 +1,13 @@
+.music-video {
+	margin-top: 5rem;
+
+	h2 {
+		@include section-header;
+	}
+
+	&-container {
+		aspect-ratio: 16/9;
+		width: 100%;
+		height: 100%;
+	}
+}
