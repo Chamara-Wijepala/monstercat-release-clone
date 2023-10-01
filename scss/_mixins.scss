@@ -1,17 +1,21 @@
 @mixin section-header {
 	font-size: 1.25rem;
 	margin-block: 1.5rem;
+	letter-spacing: 2px;
 
 	@include md {
 		font-size: 1.75rem;
 		margin-block: 2.25rem;
+		letter-spacing: 2.75px;
 	}
 
 	@include lg {
 		font-size: 2.25rem;
+		letter-spacing: 3.5px;
 	}
 
 	@include xl {
 		font-size: 2.8125rem;
+		letter-spacing: 4.5px;
 	}
 }
