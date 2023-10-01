@@ -2,6 +2,12 @@
 $navbar-md: 532px;
 $navbar-lg: 1185px;
 
+.primary-header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+
 .navbar-container {
 	padding: 0.5rem 1rem;
 	background-color: rgb(0, 0, 0, 0.7);
